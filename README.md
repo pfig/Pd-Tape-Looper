@@ -25,7 +25,8 @@ Obviously I thought I could manage a far simpler SooperLooper in [Pd][4], which 
 
 ## Status
 
-DSP loop error fixed, it *seems* to be working with white noise :)
+Works after loading a file, the merging of the signal needs to be done with a `+~` instead of a `*~` because the multiplier yields
+0 at start, since the signal coming from the player is empty.
 
 [1]: http://www.bossus.com/gear/productdetails.php?ProductId=477 "RC-20XL product page"
 [2]: http://www.bossus.com/gear/productdetails.php?ProductId=1159 "RC-3 product page"

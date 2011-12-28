@@ -25,7 +25,7 @@ Obviously I thought I could manage a far simpler SooperLooper in [Pd][4], which 
 
 ## Status
 
-At this point I'm getting an error I don't understand. Stay tuned!
+DSP loop error fixed, it *seems* to be working with white noise :)
 
 [1]: http://www.bossus.com/gear/productdetails.php?ProductId=477 "RC-20XL product page"
 [2]: http://www.bossus.com/gear/productdetails.php?ProductId=1159 "RC-3 product page"

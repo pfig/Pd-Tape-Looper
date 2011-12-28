@@ -1,5 +1,4 @@
-#N canvas 481 154 289 236 10;
-#X obj 56 33 adc~;
+#N canvas 369 203 289 236 10;
 #N canvas 677 27 315 317 recorder 1;
 #X obj 110 21 inlet~;
 #X obj 19 22 inlet~;
@@ -65,10 +64,36 @@
 #X restore 67 114 pd player;
 #X obj 67 188 send~ recorder;
 #X obj 152 70 receive~ recorder;
-#X connect 0 0 1 0;
-#X connect 0 1 1 0;
-#X connect 1 0 3 0;
+#N canvas 1033 237 117 165 loadfile 1;
+#X obj 12 7 inlet;
+#X obj 12 131 outlet~;
+#X obj 37 110 outlet~;
+#X obj 12 31 openpanel;
+#X msg 12 56 open \$1;
+#X obj 12 81 readsf~ 2;
+#X obj 85 98 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 75 57 start;
+#X obj 74 8 inlet;
+#X connect 0 0 3 0;
 #X connect 3 0 4 0;
-#X connect 3 1 2 0;
-#X connect 3 1 2 1;
-#X connect 5 0 1 1;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 5 1 2 0;
+#X connect 5 2 6 0;
+#X connect 7 0 5 0;
+#X connect 8 0 7 0;
+#X restore 67 41 pd loadfile;
+#X obj 67 8 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 130 8 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 1 0;
+#X connect 2 1 1 1;
+#X connect 4 0 0 1;
+#X connect 5 0 0 0;
+#X connect 5 1 0 0;
+#X connect 6 0 5 0;
+#X connect 7 0 5 1;
